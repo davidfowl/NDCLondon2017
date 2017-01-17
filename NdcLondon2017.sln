@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionDemos", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndToEndTesting", "EndToEndTesting\EndToEndTesting.csproj", "{DAED7703-840C-4456-8C30-16318DEC1D1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload", "FileUpload\FileUpload.csproj", "{B313E347-CA48-45D3-B51B-BC564C74E879}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{DAED7703-840C-4456-8C30-16318DEC1D1A}.Release|x64.Build.0 = Release|x64
 		{DAED7703-840C-4456-8C30-16318DEC1D1A}.Release|x86.ActiveCfg = Release|x86
 		{DAED7703-840C-4456-8C30-16318DEC1D1A}.Release|x86.Build.0 = Release|x86
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Debug|x64.ActiveCfg = Debug|x64
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Debug|x64.Build.0 = Debug|x64
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Debug|x86.ActiveCfg = Debug|x86
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Debug|x86.Build.0 = Debug|x86
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Release|x64.ActiveCfg = Release|x64
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Release|x64.Build.0 = Release|x64
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Release|x86.ActiveCfg = Release|x86
+		{B313E347-CA48-45D3-B51B-BC564C74E879}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
