@@ -26,7 +26,7 @@ namespace EndToEndTesting
         }
 
         [Fact]
-        public async Task VerifyTestEnvironentResponse()
+        public async Task VerifyTestEnvironmentResponse()
         {
             var builder = new WebHostBuilder()
                     .UseEnvironment("Test")
