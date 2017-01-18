@@ -54,14 +54,23 @@ namespace EndToEndTesting
 
     public class StartupWithEnvironment
     {
-        public void ConfigureTestServices(IServiceCollection services)
+        private readonly IHostingEnvironment _env;
+
+        public StartupWithEnvironment(IHostingEnvironment env)
         {
-            services.AddSingleton<IService, TestService>();
+            _env = env;
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IService, ProductionService>();
+            if (_env.IsEnvironment("Test"))
+            {
+                services.AddSingleton<IService, TestService>();
+            }
+            else
+            {
+                services.AddSingleton<IService, ProductionService>();
+            }
         }
 
         public void Configure(IApplicationBuilder app, IService service)

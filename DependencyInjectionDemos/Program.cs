@@ -21,7 +21,12 @@ namespace DependencyInjectionDemos
 
             var serviceProvider = services.BuildServiceProvider(validateScopes: true);
 
-            var a = serviceProvider.GetRequiredService<B>();
+            using (var scope = serviceProvider.CreateScope())
+            {
+                var goodB = scope.ServiceProvider.GetRequiredService<B>();
+            }
+
+            var badB = serviceProvider.GetRequiredService<B>();
         }
 
         static void CaptiveDependency()
@@ -31,8 +36,8 @@ namespace DependencyInjectionDemos
             services.AddSingleton<A>();
             services.AddScoped<B>();
 
+            // var serviceProvider = services.BuildServiceProvider();
             var serviceProvider = services.BuildServiceProvider(validateScopes: true);
-            // var serviceProvider = services.BuildServiceProvider(validateScopes: true);
 
             var a = serviceProvider.GetRequiredService<A>();
         }
@@ -70,6 +75,8 @@ namespace DependencyInjectionDemos
             {
                 serviceProvider.GetRequiredService<SomethingDisposable>();
             }
+
+            //(serviceProvider as IDisposable).Dispose();
         }
     }
 
